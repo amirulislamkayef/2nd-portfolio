@@ -1,11 +1,5 @@
 import Image from "next/image";
 
-const badges = [
-  { label: "React", className: "left-4 top-6 sm:left-6" },
-  { label: "TypeScript", className: "right-4 top-1/3 sm:right-6" },
-  { label: "Node.js", className: "bottom-10 left-4 sm:left-6" },
-];
-
 const socials = [
   { label: "GitHub", href: "https://github.com/amirulislamkayef" },
   {
@@ -54,6 +48,7 @@ export default function Hero() {
             </a>
             <a
               href="/resume.pdf"
+              download="Amirul-Islam-Resume.pdf"
               className="rounded-lg border border-white/20 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-white/5"
             >
               Download Resume
@@ -76,7 +71,7 @@ export default function Hero() {
         </div>
 
         {/* Right: photo card */}
-        <div className="relative mx-auto w-full max-w-md lg:max-w-lg">
+        <div className="mx-auto w-full max-w-md lg:max-w-lg">
           <div className="relative aspect-[4/5] overflow-hidden rounded-3xl border border-white/10 bg-[#15152a]">
             <Image
               src="/images/hero.jpeg"
@@ -87,15 +82,6 @@ export default function Hero() {
               className="object-cover"
             />
           </div>
-
-          {badges.map((badge) => (
-            <span
-              key={badge.label}
-              className={`absolute ${badge.className} rounded-full bg-[#7c5cfa] px-4 py-1.5 text-xs font-medium text-white shadow-lg`}
-            >
-              {badge.label}
-            </span>
-          ))}
         </div>
       </div>
     </section>
